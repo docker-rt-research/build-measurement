@@ -10,6 +10,8 @@
 CUR_FOLDER=$(pwd)
 verbose='false'
 
+pacman -Qi linux >> $CUR_FOLDER/measurements/kernel.info
+
 while getopts 'f:n:v' flag; do
   case "${flag}" in
     f) files="${OPTARG}" ;;
