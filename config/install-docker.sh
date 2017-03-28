@@ -5,4 +5,4 @@
 
 echo "Installing docker"
 sudo pacman --noconfirm -S docker
-sudo systemctl start docker
+sudo systemctl daemon-reload

@@ -1,0 +1,22 @@
+Name            : linux
+Version         : 4.10.6-1
+Description     : The Linux kernel and modules
+Architecture    : x86_64
+URL             : https://www.kernel.org/
+Licenses        : GPL2
+Groups          : base
+Provides        : None
+Depends On      : coreutils  linux-firmware  kmod  mkinitcpio>=0.7
+Optional Deps   : crda: to set the correct wireless channels of your country
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 79.90 MiB
+Packager        : Tobias Powalowski <tpowa@archlinux.org>
+Build Date      : Mon 27 Mar 2017 06:30:00 AM UTC
+Install Date    : Tue 28 Mar 2017 12:48:32 PM UTC
+Install Reason  : Explicitly installed
+Install Script  : Yes
+Validated By    : Signature
+

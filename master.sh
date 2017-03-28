@@ -36,5 +36,7 @@ do
 	for ((j=1;j<=iterations;j++))
 	do
 		sh $CUR_FOLDER/native/scen$i.sh	
+		sh $CUR_FOLDER/docker/scen$i.sh	
 	done
 done
+

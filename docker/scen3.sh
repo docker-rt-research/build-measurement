@@ -2,24 +2,26 @@
 #
 # Configuration:
 # scen3.sh
-# native ArchLinux, CCache=disabled, make -j4
-CUR_FOLDER=$(cd .. && pwd)
+# docker ArchLinux, CCache=disabled, make -j4
+CUR_FOLDER=$(pwd)
 
 $CUR_FOLDER/config/reset.sh
 $CUR_FOLDER/config/config-keys.sh
 $CUR_FOLDER/config/install-dep.sh
 $CUR_FOLDER/config/install-docker.sh
 
+sudo systemctl restart docker.service
 
-#export PATH=/usr/lib/ccache:$PATH
-#export CCACHE_DIR=~/ccache
-#export CC="ccache gcc" CXX="ccache g++"
+rm -rf ~/.cache/*
 
-cd ~/OpenDaVINCI && mkdir build
-cd build && cmake -D CMAKE_INSTALL_PREFIX=~/install_od ..
+sudo rm ~/OpenDaVINCI/docker/completeBuild.sh 
+sudo cat $CUR_FOLDER/config/completeBuild-j4.sh >> ~/OpenDaVINCI/docker/completeBuild.sh 
+
+
+
 
 echo "Beginning measurement and build"
-echo "Start build 1 at $(date +%s%N)" >> $CUR_FOLDER/measurements/scenario3.log
-cd ~/OpenDaVINCI/build && make -j4
-echo "End build 1 at $(date +%s%N)" >> $CUR_FOLDER/measurements/scenario3.log
+echo "Start build 1 at $(date +%s%N)" >> $CUR_FOLDER/measurements/docker-scenario1.log
+cd ~/OpenDaVINCI/docker && sudo make
+echo "End build 1 at $(date +%s%N)" >> $CUR_FOLDER/measurements/docker-scenario1.log
 echo "DONE!"
