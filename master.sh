@@ -37,8 +37,8 @@ for ((i=1;i<=files;i++))
 do
 	for ((j=1;j<=iterations;j++))
 	do
-		sh $CUR_FOLDER/native/scen$i.sh	
-		sh $CUR_FOLDER/docker/scen$i.sh	
+		sh $CUR_FOLDER/native/scen$i.sh	> $CUR_FOLDER/logs/scen-native-$i-$j.log
+		sh $CUR_FOLDER/docker/scen$i.sh	> $CUR_FOLDER/logs/scen-docker-$i-$j.log
 	done
 done
 

@@ -15,7 +15,7 @@ sudo systemctl restart docker.service
 rm -rf ~/.cache/*
 
 sudo rm ~/OpenDaVINCI/docker/completeBuild.sh 
-sudo cat $CUR_FOLDER/config/completeBuild-j4.sh >> ~/OpenDaVINCI/docker/completeBuild.sh 
+sudo cp $CUR_FOLDER/config/completeBuild-j4.sh /home/scott2/OpenDaVINCI/docker/completeBuild.sh 
 
 
 

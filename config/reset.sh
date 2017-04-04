@@ -4,7 +4,7 @@
 # reset.sh
 
 echo "Resetting"
-sudo systemctl restart docker.service && sudo docker rmi $(sudo docker images -q) && systemctl stop docker.service
+sudo systemctl restart docker.service && sudo docker rmi -f $(sudo docker images -q) && systemctl stop docker.service
 sudo rm -rf ~/install_od
 sudo pacman --noconfirm -Rsc apache-ant jdk8-openjdk boost cmake ffmpeg2.8 freeglut gcc git junit make opencv python2 qt4 qwt5 ccache docker
 
