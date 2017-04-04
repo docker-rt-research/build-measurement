@@ -13,5 +13,6 @@ sudo systemctl daemon-reload
 sudo rm -rf ~/OpenDaVINCI
 echo "Copying OpenDaVINCI"
 sudo cp -Rap /root/OpenDaVINCI ~/OpenDaVINCI
+sudo chown -R scott2:scott2 ~/OpenDaVINCI
 mkdir -p ~/install_od
 mkdir ~/install_od/ccache
