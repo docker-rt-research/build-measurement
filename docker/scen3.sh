@@ -21,7 +21,7 @@ sudo cp $CUR_FOLDER/config/completeBuild-j4.sh /home/scott2/OpenDaVINCI/docker/c
 
 
 echo "Beginning measurement and build"
-echo "Start build 1 at $(date +%s%N)" >> $CUR_FOLDER/measurements/docker-scenario1.log
+echo "Start build 1 at $(date +%s%N)" >> $CUR_FOLDER/measurements/docker-scenario3.log
 cd ~/OpenDaVINCI/docker && sudo make
-echo "End build 1 at $(date +%s%N)" >> $CUR_FOLDER/measurements/docker-scenario1.log
+echo "End build 1 at $(date +%s%N)" >> $CUR_FOLDER/measurements/docker-scenario3.log
 echo "DONE!"
